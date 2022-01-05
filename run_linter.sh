@@ -17,8 +17,8 @@ else
 fi
 
 # TODO(steve): Set this up to run from TC build.
-docker run --volume "$(pwd):/workspace" --workdir /workspace bufbuild/buf lint
-docker image rm -f bufbuild/buf:latest
+# docker run --volume "$(pwd):/workspace" --workdir /workspace bufbuild/buf lint
+# docker image rm -f bufbuild/buf:latest
 
 set -
 
