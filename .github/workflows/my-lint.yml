@@ -33,6 +33,3 @@ jobs:
         env:
           CLANG_FORMAT: "/usr/bin/clang-format-10"
           GITHUB_ACCESS_TOKEN: ${{ secrets.GHP }}
-      secrets:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
