@@ -40,3 +40,5 @@ jobs:
           yarn build
           cd build/proto
           ls
+      - name: Show build number
+        run: echo ${{ github.run_number }} 
