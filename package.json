@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./build/proto && mkdir -p ./build/proto",
-    "build": "bash scripts/ts_build.sh",
+    "build": "bash scripts/ts_build.sh ${0}",
     "build-publish": "yarn build && yarn publish build/proto",
     "lint": "bash scripts/run_linter.sh"
   },
