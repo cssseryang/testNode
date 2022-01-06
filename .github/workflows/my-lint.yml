@@ -35,6 +35,7 @@ jobs:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GHP }}
       - name: Bind JS
         run: |
+          set -e -x
           yarn install
           yarn build
           cd build/proto
