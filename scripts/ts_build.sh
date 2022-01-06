@@ -8,7 +8,7 @@ cd ${BASEDIR}/../
 PROTO_DEST=./build/proto
 
 mkdir -p ${PROTO_DEST}
-
+echo $PWD 
 # JavaScript code generation
 yarn run grpc_tools_node_protoc \
 --ts_out=generate_package_definition:${PROTO_DEST} \
