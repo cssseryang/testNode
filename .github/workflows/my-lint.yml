@@ -29,7 +29,13 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@master        
       - name: Lint and Check
-        run: "${GITHUB_WORKSPACE}/run_linter.sh"
+        run: "${GITHUB_WORKSPACE}/scripts/run_linter.sh"
         env:
           CLANG_FORMAT: "/usr/bin/clang-format-10"
           GITHUB_ACCESS_TOKEN: ${{ secrets.GHP }}
+      - name: Bind JS
+        run: |
+          yarn install
+          yarn build
+          cd build/proto
+          ls
