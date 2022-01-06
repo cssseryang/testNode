@@ -37,10 +37,6 @@ jobs:
         run: |
           set -e -x
           yarn install
-          yarn build
+          yarn build ${{ github.run_number }}
           cd build/proto
           ls
-      - name: Show build number
-        run: |
-          echo "2.0.${{ github.run_number }}"
-          npm bump "2.0.${{ github.run_number }}" 

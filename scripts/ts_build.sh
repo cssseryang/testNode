@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e -x
-
+BUILD_NUMBER=$1
 BASEDIR=$(dirname "$0")
 cd ${BASEDIR}/../
 
@@ -10,6 +10,7 @@ PROTO_DEST=./build/proto
 mkdir -p ${PROTO_DEST}
 cd src/v1/
 echo $PWD
+echo $BUILD_NUMBER
 # JavaScript code generation
 # /Users/apple/Desktop/1215/testNode/node_modules/.bin/grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=generate_package_definition:. helloworld.proto
 
